@@ -188,25 +188,6 @@ response.status possible values:
 - -3: Unknown Error
 - -4: invalid request
 
-## 🔄 Typical Subscription Flow
-
-- Load SDK via ComponentLibrary
-- Wait for loadStatus = `"ready"`
-- Call InitChannelStore
-- Check existing subscriptions `(GetAllPurchases)`
-- Fetch available products `(GetAllCatalog)`
-- Allow user to select a plan
-- Call DoSubscriptionOrder
-- Observe purchaseResponse and update UI
-
-## 🧠 Best Practices
-
-- Initialize the Channel Store only once per app lifecycle
-- Always check purchases on app start
-- Re-fetch catalog when entering subscription screens
-- Drive UI updates through field observers
-- Treat `status = 1` as the only successful purchase state
-
 ## 🧾 Licensing
 
 This SDK is developed and maintained by **Invotyx Software Company**.  
