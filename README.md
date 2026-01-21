@@ -209,7 +209,8 @@ response.status possible values:
 
 ## 🧾 Licensing
 
-This SDK is developed and maintained by Invotyx Software Company.
+This SDK is developed and maintained by **Invotyx Software Company**.  
 All rights reserved.
 
-Redistribution, modification, or commercial usage is subject to the terms defined by Invotyx.
+Redistribution, modification, or commercial usage is subject to the terms defined by **Invotyx**.
+
