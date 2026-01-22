@@ -86,7 +86,7 @@ sub onLoadStatus()
         m.global.SubscriptionLib = CreateObject("roSGNode", "InvotyxSubscriptionSdkLib:SubscriptionLib")
         m.global.SubscriptionLib.callFunc("InitChannelStore", "YOUR_STORE_TOKEN")
     else
-        print "Subscription SDK failed to load"
+        ' Subscription SDK failed to load 
     end if
 end sub
 ```
@@ -115,9 +115,7 @@ m.global.SubscriptionLib.observeField("allPurchases", "OnPurchasesLoaded")
 ```brightscript
 sub OnPurchasesLoaded()
     purchases = m.global.SubscriptionLib.allPurchases
-    for each purchase in purchases
-        print purchase
-    end for
+    ' you can handle you purchases flow from here
 end sub
 ```
 
@@ -132,10 +130,8 @@ m.global.SubscriptionLib.observeField("productsCatalog", "OnCatalogLoaded")
 ```
 ```brightscript
 sub OnCatalogLoaded()
-    products = m.global.SubscriptionLib.productsCatalog
-    for each product in products
-        print product
-    end for
+    catalog = m.global.SubscriptionLib.productsCatalog
+    ' you can handle you catalog flow from here
 end sub
 ```
 
@@ -152,9 +148,9 @@ m.global.SubscriptionLib.ObserveField("purchaseResponse", "OnSubscriptionOrderCo
 sub OnSubscriptionOrderComplete()
     response = m.global.SubscriptionLib.purchaseResponse
     if response.status = 1
-        print "Subscription successful"
+        ' Subscription successful
     else
-        print "Subscription failed"
+        ' Subscription failed 
     end if
 end sub
 ```
@@ -172,9 +168,9 @@ m.global.SubscriptionLib.observeField("recoveryResponse", "OnRecoveryComplete")
 sub OnRecoveryComplete()
     response = m.global.SubscriptionLib.recoveryResponse
     if response.status = 1
-        print "Subscription recovery successful"
+        ' Subscription recovery successful
     else
-        print "Subscription recovery failed"
+        ' Subscription recovery failed
     end if
 end sub
 ```
